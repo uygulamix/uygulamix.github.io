@@ -2,18 +2,93 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Benim Web Sitem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uygulamix | Mobile Game Studio</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background-color: #f4f4f4; padding: 50px; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block; }
-        h1 { color: #333; }
+        :root {
+            --primary-color: #6200ee;
+            --secondary-color: #03dac6;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #6200ee, #03dac6);
+        }
+        .logo { font-size: 3rem; font-weight: bold; letter-spacing: 2px; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; }
+        
+        .container { padding: 50px 20px; max-width: 1000px; margin: auto; }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .game-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+        .game-card:hover { transform: translateY(-10px); border-color: var(--secondary-color); }
+        .game-icon { width: 80px; height: 80px; border-radius: 15px; background: #333; margin-bottom: 15px; }
+        
+        .btn-google {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            border: 1px solid #444;
+        }
+        .btn-google:hover { background: #333; }
+        
+        footer { padding: 40px; opacity: 0.6; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🚀 Sitem Yayına Girdi!</h1>
-        <p>Bu siteyi GitHub üzerinden ücretsiz olarak kurdum.</p>
-        <p>Şu an dünya üzerinden herkes bu sayfaya ulaşabilir.</p>
+
+<header>
+    <div class="logo">UYGULAMIX</div>
+    <p class="tagline">Innovative Mobile Games for Android</p>
+</header>
+
+<div class="container">
+    <h2>Oyunlarımız</h2>
+    <div class="games-grid">
+        <div class="game-card">
+            <div style="font-size: 40px;">🎮</div>
+            <h3>Oyun Adı 1</h3>
+            <p>Google Play Store'daki heyecan dolu ilk oyunumuz. Hemen ücretsiz indir!</p>
+            <a href="#" class="btn-google">Google Play'de Gör</a>
+        </div>
+
+        <div class="game-card">
+            <div style="font-size: 40px;">🎲</div>
+            <h3>Oyun Adı 2</h3>
+            <p>Strateji ve hızın birleştiği benzersiz bir deneyim.</p>
+            <a href="#" class="btn-google">Google Play'de Gör</a>
+        </div>
     </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Uygulamix Game Studio. Tüm hakları saklıdır.</p>
+</footer>
+
 </body>
 </html>
