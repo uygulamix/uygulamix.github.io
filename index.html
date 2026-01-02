@@ -1,95 +1,222 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-6218170390614872">
-    <title>Uygulamix | Mobile Game Studio</title>
-    <style>
-        :root {
-            --primary-color: #6200ee;
-            --secondary-color: #03dac6;
-            --dark-bg: #121212;
-            --card-bg: #1e1e1e;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark-bg);
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #6200ee, #03dac6);
-        }
-        .logo { font-size: 3rem; font-weight: bold; letter-spacing: 2px; }
-        .tagline { font-size: 1.2rem; opacity: 0.9; }
-        
-        .container { padding: 50px 20px; max-width: 1000px; margin: auto; }
-        
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .game-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 20px;
-            transition: transform 0.3s;
-            border: 1px solid #333;
-        }
-        .game-card:hover { transform: translateY(-10px); border-color: var(--secondary-color); }
-        .game-icon { width: 80px; height: 80px; border-radius: 15px; background: #333; margin-bottom: 15px; }
-        
-        .btn-google {
-            display: inline-block;
-            background: #000;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            border: 1px solid #444;
-        }
-        .btn-google:hover { background: #333; }
-        
-        footer { padding: 40px; opacity: 0.6; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<title>Uygulamix | Mobile Games & Apps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Uygulamix mobil oyun ve uygulama geliştiren bir yazılım şirketidir.">
+
+<!-- 🔴 ADSENSE KODUNU BURAYA EKLE -->
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6218170390614872"
+     crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --accent:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui;
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:var(--text);
+}
+header{
+  padding:80px 20px;
+  text-align:center;
+}
+header h1{
+  font-size:52px;
+  margin:0;
+}
+header span{
+  color:var(--accent);
+}
+header p{
+  max-width:700px;
+  margin:20px auto;
+  color:var(--muted);
+  font-size:18px;
+}
+.lang-btn{
+  margin-top:25px;
+  padding:10px 18px;
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:6px;
+  cursor:pointer;
+}
+section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 20px;
+}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:35px;
+  margin-bottom:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+h2{
+  font-size:34px;
+  margin-top:0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.app{
+  background:#020617;
+  padding:25px;
+  border-radius:12px;
+}
+.app h3{
+  margin-top:0;
+}
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:var(--accent);
+  color:#020617;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+}
+input,textarea{
+  width:100%;
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:12px;
+  color:white;
+  border-radius:8px;
+  margin-top:12px;
+}
+button.send{
+  margin-top:15px;
+  background:var(--accent);
+  color:#020617;
+  border:none;
+  padding:12px 22px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  font-size:14px;
+}
+.en{display:none}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">UYGULAMIX</div>
-    <p class="tagline">Innovative Mobile Games for Android</p>
+  <h1>Uygula<span>mix</span></h1>
+  <p class="tr">
+    Mobil oyunlar ve uygulamalar geliştiren modern bir yazılım stüdyosu.
+  </p>
+  <p class="en">
+    A modern software studio developing mobile games and applications.
+  </p>
+  <button class="lang-btn" onclick="toggleLang()">TR / EN</button>
 </header>
 
-<div class="container">
-    <h2>Oyunlarımız</h2>
-    <div class="games-grid">
-        <div class="game-card">
-            <div style="font-size: 40px;">🎮</div>
-            <h3>Oyun Adı 1</h3>
-            <p>Google Play Store'daki heyecan dolu ilk oyunumuz. Hemen ücretsiz indir!</p>
-            <a href="#" class="btn-google">Google Play'de Gör</a>
-        </div>
+<section>
+  <div class="card">
+    <h2 class="tr">Biz Kimiz?</h2>
+    <h2 class="en">Who We Are</h2>
 
-        <div class="game-card">
-            <div style="font-size: 40px;">🎲</div>
-            <h3>Oyun Adı 2</h3>
-            <p>Strateji ve hızın birleştiği benzersiz bir deneyim.</p>
-            <a href="#" class="btn-google">Google Play'de Gör</a>
-        </div>
+    <p class="tr">
+      Uygulamix, Android ve mobil platformlar için oyunlar ve uygulamalar geliştiren
+      bağımsız bir yazılım şirketidir. Kalite, performans ve kullanıcı deneyimi odaklı çalışırız.
+    </p>
+
+    <p class="en">
+      Uygulamix is an independent software company developing games and applications
+      for Android and mobile platforms. We focus on quality, performance, and user experience.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="tr">Projelerimiz</h2>
+    <h2 class="en">Our Projects</h2>
+
+    <div class="grid">
+      <div class="app">
+        <h3>Slot Machine Game</h3>
+        <p class="tr">Android için geliştirilmiş eğlenceli bir slot oyunu.</p>
+        <p class="en">A fun slot machine game developed for Android.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.slotgame.slotmachine" target="_blank">
+          Google Play
+        </a>
+      </div>
     </div>
-</div>
+  </div>
+
+  <div class="card">
+    <h2 class="tr">İletişim</h2>
+    <h2 class="en">Contact</h2>
+
+    <form action="mailto:uygulamix@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Ad / Name" required>
+      <input type="email" name="email" placeholder="E-posta / Email" required>
+      <textarea rows="5" name="message" placeholder="Mesaj / Message" required></textarea>
+      <button class="send" type="submit">Gönder / Send</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2 class="tr">Gizlilik Politikası</h2>
+    <h2 class="en">Privacy Policy</h2>
+
+    <p class="tr">
+      Uygulamix kullanıcı gizliliğine önem verir. Web sitemiz ve mobil uygulamalarımız
+      Google Play, Google AdMob ve Google AdSense politikalarına uygundur.
+      Reklamlar Google AdMob aracılığıyla sunulur.
+    </p>
+
+    <p class="en">
+      Uygulamix values user privacy. Our website and mobile applications comply with
+      Google Play, Google AdMob, and Google AdSense policies.
+      Ads are served through Google AdMob.
+    </p>
+  </div>
+</section>
 
 <footer>
-    <p>&copy; 2026 Uygulamix Game Studio. Tüm hakları saklıdır.</p>
+  © 2026 Uygulamix — Mobile Games & Apps
 </footer>
+
+<script>
+let currentLang = "tr";
+
+function toggleLang() {
+  if (currentLang === "tr") {
+    document.querySelectorAll(".tr").forEach(e => e.style.display = "none");
+    document.querySelectorAll(".en").forEach(e => e.style.display = "block");
+    currentLang = "en";
+  } else {
+    document.querySelectorAll(".en").forEach(e => e.style.display = "none");
+    document.querySelectorAll(".tr").forEach(e => e.style.display = "block");
+    currentLang = "tr";
+  }
+}
+</script>
+
 
 </body>
 </html>
